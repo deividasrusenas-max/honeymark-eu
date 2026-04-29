@@ -1,0 +1,199 @@
+---
+export interface Props {
+  name: string;
+  tagline: string;
+  description: string;
+  tags: string[];
+  clients: string;
+  category: 'universal' | 'premium' | 'clean';
+  learnMore: string;
+  specCta: string;
+  categoryLabel: string;
+  params: {
+    moisture: string;
+    fg: string;
+    color: string;
+    aroma: string;
+    purity: string;
+    processing: string;
+  };
+  paramValues: {
+    moisture: string;
+    fg: string;
+    color: string;
+    aroma: string;
+    purity: string;
+    processing: string;
+    moisturePct: number;
+    fgPct: number;
+    colorPct: number;
+    aromaPct: number;
+    purityPct: number;
+  };
+  locale: string;
+}
+
+const { 
+  name, 
+  tagline, 
+  description, 
+  tags, 
+  clients, 
+  category, 
+  specCta,
+  categoryLabel,
+  params,
+  paramValues,
+  locale
+} = Astro.props;
+
+// Category colors
+const categoryColors: Record<string, string> = {
+  universal: '#C9A84C',
+  premium: '#534AB7', 
+  clean: '#0F6E56'
+};
+
+const color = categoryColors[category];
+
+const paramOrder = ['moisture', 'fg', 'color', 'aroma', 'purity', 'processing'];
+const safeGet = (obj: any, key: string) => obj?.[key] ?? key;
+---
+<article class="bg-white border border-border hover:border-text-secondary transition-colors duration-200 rounded-2xl p-5 shadow-none">
+  <!-- Header row -->
+  <div class="flex items-start gap-3 mb-5">
+    <div class="flex-shrink-0 mt-1">
+      <div 
+        style={{ 
+          backgroundColor: `${color}20`,
+          width: '2.5rem', 
+          height: '2.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '9999px'
+        }}
+      >
+        <div 
+          style={{ 
+            backgroundColor: color,
+            width: '12px',
+            height: '12px',
+            borderRadius: '9999px'
+          }} 
+        />
+      </div>
+    </div>
+    <div class="flex-1 min-w-0">
+      <h3 class="font-heading font-semibold text-text-primary text-base">{name}</h3>
+      <p class="font-body text-sm text-text-secondary">{tagline}</p>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p class="font-body text-sm text-text-primary mb-4 leading-relaxed">
+    {description}
+  </p>
+
+  <!-- Parameters section -->
+  <div class="space-y-3 mb-4">
+    {paramOrder.map((key) => {
+      const label = safeGet(params, key);
+      const value = safeGet(paramValues, key);
+      const pct = safeGet(paramValues, `${key}Pct`);
+      if (!label || !value || pct === undefined) return null;
+      return (
+        <div class="flex items-center gap-3">
+          <span class="font-body text-xs font-medium text-text-secondary w-[90px] flex-shrink-0">
+            {label}
+          </span>
+          <div class="flex-1 min-w-0 flex items-center gap-2">
+            <div 
+              style={{ 
+                flex: '1',
+                height: '6px',
+                backgroundColor: '#e5e7eb',
+                borderRadius: '9999px',
+                overflow: 'hidden'
+              }}
+            >
+              <div 
+                style={{ 
+                  width: `${pct}%`,
+                  height: '100%',
+                  backgroundColor: color,
+                  borderRadius: '9999px'
+                }} 
+              />
+            </div>
+            <span class="font-body text-xs text-text-primary flex-shrink-0 text-right w-[90px]">
+              {value}
+            </span>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Tags -->
+  <div class="flex flex-wrap gap-2 mb-4">
+    {tags.map((tag) => (
+      <span 
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          px: '0.625rem',
+          py: '0.25rem',
+          borderRadius: '9999px',
+          fontSize: '0.75rem',
+          fontWeight: '500',
+          border: '1px solid #e5e7eb',
+          backgroundColor: 'transparent',
+          color: '#1f2937'
+        }}
+      >
+        {tag}
+      </span>
+    ))}
+  </div>
+
+  <!-- Clients line -->
+  <div style={{ borderTop: '1px solid #e5e7eb', marginTop: '1rem', paddingTop: '0.75rem' }}>
+    <p class="font-body text-xs text-text-secondary">
+      {clients}
+    </p>
+  </div>
+
+  <!-- Category badge -->
+  <div class="mb-4">
+    <span 
+      style={{
+        display: 'inline-block',
+        px: '0.5rem',
+        py: '0.25rem',
+        borderRadius: '0.25rem',
+        fontSize: '0.75rem',
+        fontWeight: '500',
+        backgroundColor: `${color}1a`,
+        color
+      }}
+    >
+      {categoryLabel}
+    </span>
+  </div>
+
+  <!-- CTA button - uses inline onclick with JS string -->
+  <button
+    type="button"
+    class="w-full py-2 px-4 rounded-lg border font-medium"
+    style={{
+      borderColor: color,
+      color: color,
+      fontSize: '0.875rem',
+      fontWeight: '400'
+    }}
+    onclick={`window.location.href='/${locale}/contact?line=${encodeURIComponent(name)}'`}
+  >
+    {specCta}
+  </button>
+</article>

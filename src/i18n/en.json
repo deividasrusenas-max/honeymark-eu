@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Order"
+  },
+  "hero": {
+    "title": "Natural honey for your business",
+    "titleLine1": "Honey that behaves",
+    "titleLine2": "like an ingredient.",
+    "titleLine3": "Not a problem.",
+    "subtitle": "You shouldn't be calling your supplier on Friday at 11 PM because the glaze went matte. We supply process-optimized honey with predictable consistency.",
+    "cta1": "See the 6 Lines",
+    "cta2": "Request a sample",
+    "badge1": "LC-MS/MS tested",
+    "badge2": "Honey Passport per batch",
+     "badge": "B2B honey supplier · Baltic states",
+    "badge3suffix": "years of experience",
+    "imageAlt": "Golden honey jar with wooden spoon"
+  },
+  "about": {
+    "title": "About us",
+    "sectionTitle": "Trusted honey supplier in the Baltics",
+    "p1": "Honeymark is a B2B honey brand managed by MB Lakštena, with 13 years of experience in the Baltic bulk trade market. We deliver natural and organically certified honey to food manufacturing, confectionery, alcoholic beverages, and bakery industries.",
+    "p2": "Our clients — the largest food and beverage companies in the Baltic states — trust Honeymark for consistent quality, reliable deliveries, and long-term partnership approach.",
+    "description": "HoneyMark is a process-optimized B2B honey brand engineered for European food and beverage producers. Backed by MB Lakštena's 350-ton processing capacity, we specify every line for one exact application. Because cheaper honey isn't cheaper if it ruins your batch.",
+    "logistics": "Ergonomic 7kg and 14kg buckets compliant with EU lifting regulations. Ready-to-ship from our PL/LT hubs.",
+    "learnMore": "Learn more about us",
+    "imageAlt": "Jar with golden honey"
+  },
+  "products": {
+    "title": "Six Lines",
+    "subtitle": "Each line is designed for a specific production process — not for general raw material.",
+    "viewAll": "View all lines",
+    "learnMore": "Get specification",
+    "specCta": "Get specification",
+    "items": {
+      "bakeryBase": {
+        "name": "Bakery Base",
+        "tagline": "Bread, pastries, cakes",
+        "description": "Universal bakery raw material with stable Maillard reaction. Market leader in food production volumes.",
+        "tags": ["EU raw material", "Volume leader", "Maillard reaction"],
+        "clients": "Bakeries, confectionery manufacturers, cake and muesli producers",
+        "category": "universal"
+      },
+      "bakeryGlaze": {
+        "name": "Bakery Glaze",
+        "tagline": "Cakes, creams, glazes",
+        "description": "Slow crystallizing. Preserves glossiness to the last customer. Lime and polyfloral blends.",
+        "tags": ["Lime and polyfloral", "Slow crystallization", "3 months guarantee"],
+        "clients": "Cake confectionery manufacturers, glazed cake producers, cream factories",
+        "category": "premium"
+      },
+      "bakeryGingerbread": {
+        "name": "Bakery Gingerbread",
+        "tagline": "Spice cakes, traditional confectionery",
+        "description": "Dark, intense flavor blend of mustard and linseed. Pylus analysis with every batch.",
+        "tags": ["Mustard and linseed", "Pylus analysis", "Flavor provider"],
+        "clients": "Spice cake manufacturers, traditional confectionery, exporters",
+        "category": "universal"
+      },
+      "marinade": {
+        "name": "Marinade",
+        "tagline": "Meat, sauces, marinades",
+        "description": "Functional pricing with EU origin guarantee. Neutral aroma that does not override marinade profiles.",
+        "tags": ["EU origin", "Neutral aroma", "Functional pricing"],
+        "clients": "Meat processing companies, sauce manufacturers, marinades and pickling industry",
+        "category": "universal"
+      },
+      "mead": {
+        "name": "Mead",
+        "tagline": "Honey, hydromel",
+        "description": "Antibiotic levels below detection limit. Each batch with laboratory data and traceability.",
+        "tags": ["LT traceability", "Antibiotics below norm", "Honey Passport"],
+        "clients": "Meaderies, traditional mead producers",
+        "category": "clean"
+      },
+      "ferment": {
+        "name": "Ferment",
+        "tagline": "Kombucha, rye, fermented beverages",
+        "description": "Organically certified. Pylus preserved. Friendly to fermentation cultures.",
+        "tags": ["Only organic", "Culture friendly", "Pylus preserved"],
+        "clients": "Kombucha manufacturers, fermented beverage companies",
+        "category": "clean"
+      }
+    },
+    "params": {
+      "moisture": "Moisture content",
+      "fg": "F/G ratio",
+      "color": "Color",
+      "aroma": "Aroma intensity",
+      "purity": "Purity",
+      "processing": "Processing"
+    },
+    "paramValues": {
+      "bakeryBase": {
+        "moisture": "18.0%",
+        "fg": "1.1–1.2",
+        "color": "Light–medium",
+        "aroma": "Neutral",
+        "purity": "Standard",
+        "processing": "Standard",
+        "moisturePct": 80,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 30,
+        "purityPct": 50,
+        "processingPct": 50
+      },
+      "bakeryGlaze": {
+        "moisture": "18.5%",
+        "fg": "≥1.3",
+        "color": "Light",
+        "aroma": "Mild",
+        "purity": "LT/PL selection",
+        "processing": "Microfiltration",
+        "moisturePct": 82,
+        "fgPct": 70,
+        "colorPct": 25,
+        "aromaPct": 25,
+        "purityPct": 75,
+        "processingPct": 70
+      },
+      "bakeryGingerbread": {
+        "moisture": "17.5–18.5%",
+        "fg": "1.0–1.3",
+        "color": "Dark ≥85",
+        "aroma": "Intense",
+        "purity": "Pylus verified",
+        "processing": "Minimal",
+        "moisturePct": 78,
+        "fgPct": 50,
+        "colorPct": 90,
+        "aromaPct": 85,
+        "purityPct": 65,
+        "processingPct": 20
+      },
+      "marinade": {
+        "moisture": "18–19.5%",
+        "fg": "≥1.3",
+        "color": "Medium",
+        "aroma": "Neutral",
+        "purity": "EU only",
+        "processing": "Pasteurized",
+        "moisturePct": 85,
+        "fgPct": 70,
+        "colorPct": 55,
+        "aromaPct": 35,
+        "purityPct": 55,
+        "processingPct": 65
+      },
+      "mead": {
+        "moisture": "17.5–18.5%",
+        "fg": "1.1–1.3",
+        "color": "Light–medium",
+        "aroma": "Subtle",
+        "purity": "Lab. per batch",
+        "processing": "Cold 10–15°C",
+        "moisturePct": 78,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 45,
+        "purityPct": 95,
+        "processingPct": 50
+      },
+      "ferment": {
+        "moisture": "18.5–19.5%",
+        "fg": "1.0–1.2",
+        "color": "Medium",
+        "aroma": "Subtle",
+        "purity": "Organic + lab.",
+        "processing": "Minimal",
+        "moisturePct": 87,
+        "fgPct": 45,
+        "colorPct": 50,
+        "aromaPct": 20,
+        "purityPct": 100,
+        "processingPct": 30
+      }
+    },
+    "categories": {
+      "universal": "Universal",
+      "premium": "Premium",
+      "clean": "Clean guarantee"
+    },
+    "specifications": "Technical specification"
+  },
+  "whyus": {
+    "items": [
+      {
+        "num": "01",
+        "title": "13 years of experience",
+        "description": "Continuous honey delivery to Baltic food and beverage industry since 2012. We know your production requirements."
+      },
+      {
+        "num": "02",
+        "title": "Organically certified",
+        "description": "We have an organic farming certificate. Every batch is tested in the lab for purity and EU food safety standards compliance."
+      },
+      {
+        "num": "03",
+        "title": "Flexible logistics",
+        "description": "We deliver from 100 kg boxes (7, 14, 29 kg) and drums (290 kg). Delivery across all Baltic states according to your production schedule."
+      }
+    ],
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Batch-to-Batch Stability",
+        "description": "Same parameters, every time. F/G ratios and moisture levels are kept within strict technical tolerances. Documented in every Honey Passport."
+      },
+      {
+        "num": "02",
+        "title": "Application-Specific",
+        "description": "Six lines engineered for exact processes. From baking to fermentation, each line is tested with technologists to prevent production failures."
+      },
+      {
+        "num": "03",
+        "title": "Audit-Ready Simplicity",
+        "description": "Internal batch screening verified by independent FoodQS (Germany) testing. LC-MS/MS screening means you never worry about compliance."
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications and quality",
+    "euCert": "EU food safety certificate",
+    "labTested": "Lab tested — no antibiotics",
+    "moisture": "Moisture and diastase analysis",
+    "traceability": "Full traceability"
+  },
+  "supplyFormats": {
+    "title": "Packaging",
+    "bucket": "Buckets",
+    "bucketSub": "7 kg · 14 kg · 29 kg",
+    "barrel": "Drums",
+    "barrelSub": "290 kg"
+  },
+  "cta": {
+    "title": "Ready to collaborate?",
+    "subtitle": "Get in touch for bulk pricing, samples, and delivery terms tailored to your production.",
+    "subtitle2": "HoneyMark is a process-optimized B2B honey brand engineered for European food and beverage producers. Backed by MB Lakštena's 350-ton processing capacity, we specify every line for one exact application."
+  },
+  "contact": {
+    "title": "Contact",
+    "heading": "Get in touch",
+    "subtitle": "Get in touch directly — we respond within 24 business hours.",
+    "subtitle2": "HoneyMark is a process-optimized B2B honey brand engineered for European food and beverage producers. Backed by MB Lakštena's 350-ton processing capacity, we specify every line for one exact application.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "location": "Juodupė, Lithuania",
+    "email": "info@honeymark.eu",
+    "phone": "+370 64582631",
+    "whatsappLabel": "WhatsApp",
+    "responseTime": "We respond within 24 business hours",
+    "trustBadge1": "EU certified supplier",
+    "trustBadge2": "Each batch tested in the lab",
+    "trustBadge3": "Baltic states markets",
+    "areaServed": "Serving Lithuania, Latvia and Estonia"
+  },
+  "footer": {
+    "copyright": "© {year} Honeymark. All rights reserved.",
+    "tagline": "Process-optimized honey for EU food producers."
+  },
+  "banner": {
+    "message": "It seems you might enjoy English.",
+    "cta": "View page in English",
+    "dismiss": "×"
+  }
+}

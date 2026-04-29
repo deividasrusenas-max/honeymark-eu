@@ -1,0 +1,265 @@
+{
+  "nav": {
+    "products": "Produkti",
+    "about": "Par mums",
+    "contact": "Kontakti",
+    "cta": "Pasūtīt"
+  },
+  "hero": {
+    "title": "Dabiskais medus Jūsu verslai",
+    "titleLine1": "Medus, kas uzvedas",
+    "titleLine2": "kā izejviela.",
+    "titleLine3": "Ne kā problēma.",
+    "subtitle": "Mēs piegādājam procesiem optimizētu B2B medu ar garantētu partiju stabilitāti. Vairāk nevajadzīgu pārtraukumu ražošanas līnijās un stresa pirms auditā.",
+    "cta1": "Iepazīties ar 6 līnijām",
+    "cta2": "Pasūtīt paraugpartiju",
+    "badge1": "LC-MS/MS laboratorijā",
+    "badge2": "Honey Passport sertifikāti",
+    "badge": "B2B medaus tiekējs · Baltijas šalys",
+    "badge3suffix": "gadu pieredze",
+    "imageAlt": "Zelta medus trauks ar koka karodziņu"
+  },
+  "about": {
+    "title": "Par mums",
+    "sectionTitle": "Uzticams Baltijas medus piegādātājs",
+    "p1": "Honeymark ir B2B medus zīmols, ko pārvalda MB Lakštena, ar 13 gadu pieredzi Baltijas lielumtirgošanas tirgū. Mēs piegādājam dabisku un organiski sertificētu medu pārtikas ražošanas, konfekšu, alkoholisko dzēruņu un cepumu nozarēm.",
+    "p2": "Mūsu klientsi — lielākās Baltijas pārtikas un dzēruņu uzņēmumi — uzticas Honeymark vienmērīgai kvalitātei, uzticamiem piegādājumiem un garlaicīgas partneristes pieejas dēļ.",
+    "description": "HoneyMark ir procesiem optimizēts B2B medus zīmols Eiropas pārtikas un dzērienu ražotājiem. Pārvaldot 350 tonnu ražošanas jaudu, mēs pielāgojam katru līniju konkrētam pielietojumam. Jo lētāks medus nav lētāks, ja tas sabojā jūsu ražošanas partiju.",
+    "logistics": "Ergonomiski 7 kg un 14 kg spaiņi, kas atbilst ES celšanas noteikumiem. Pastāvīgs atlikums PL/LT noliktavās.",
+    "learnMore": "Uzzināt vairāk par mums",
+    "imageAlt": "Stikls zeltainā medā"
+  },
+  "products": {
+    "title": "Sešas līnijas",
+    "subtitle": "Katru līniju izveidoja konkretnam ražošanas procesam — nevis vispārīgai izejvielai.",
+    "viewAll": "Skatīt visas līnijas",
+    "learnMore": "Iegūt specifikāciju",
+    "specCta": "Iegūt specifikāciju",
+    "items": {
+      "bakeryBase": {
+        "name": "Bakery Base",
+        "tagline": "Pārējas, maizes izdelījumi, cepumi",
+        "description": "Universāla cepumu izejviela ar stabilu Maillard reakciju. Tirgus līderis pārtikas ražošanas apjomiem.",
+        "tags": ["ES izejviela", "Apjoma līderis", "Maillard reakcija"],
+        "clients": "Cepumnieki, konfekšu ražotāji, cepumu un muesli ražotāji",
+        "category": "universal"
+      },
+      "bakeryGlaze": {
+        "name": "Bakery Glaze",
+        "tagline": "Tortas, krēmi, glazējumi",
+        "description": "Lēni kristalizējas. Saglabā spīdumu līdz pēdējam klientam. Liepas un daudzpuķu jūkls.",
+        "tags": ["Liepa un daudzpuķe", "Lēna kristalizācija", "3 mēnešu garantija"],
+        "clients": "Tortu konfekšu ražotāji, glazētu izdelījumu ražotāji, krēmu rūpnīcas",
+        "category": "premium"
+      },
+      "bakeryGingerbread": {
+        "name": "Bakery Gingerbread",
+        "tagline": "Ķimenes cepumi, tradicionālā konfekšu izdelījumi",
+        "description": "Tumšs, intensīva aromata griķu un liejas jūkls. Pylus analīze ar katru partiju.",
+        "tags": ["Griķi un lieja", "Pylus analīze", "Aromata sniedzējs"],
+        "clients": "Ķimenes cepumu ražotāji, tradicionālās konfekšu izdelījumi, eksportētāji",
+        "category": "universal"
+      },
+      "marinade": {
+        "name": "Marinade",
+        "tagline": "Gaļa, mērces, marināti",
+        "description": "Funkcionāla izmaksas ar ES izcelsmes garantiju. Neitrāls aromāts, kas nepārspīlē marinādu profilu.",
+        "tags": ["ES izcelsme", "Neitrāls aromāts", "Funkcionāla izmaksas"],
+        "clients": "Gaļas pārstrādes uzņēmumi, mērču ražotāji, marinātu un pārkodēšanas industrija",
+        "category": "universal"
+      },
+      "mead": {
+        "name": "Mead",
+        "tagline": "Medus, hidromēls",
+        "description": "Antibiotiku līmenis zem noteikšanas robežas. Katra partija ar laboratorijas datiem un atsekojamību.",
+        "tags": ["LV atsekojamība", "Antibiotikas zem normas", "Honey Passport"],
+        "clients": "Medus darītavas, tradicionālās medus iestādes",
+        "category": "clean"
+      },
+      "ferment": {
+        "name": "Ferment",
+        "tagline": "Kombuča, raugājami dzērieni, fermentēti dzērieni",
+        "description": "Organiski sertificēts. Pylus saglabāts. Draudzīgs fermentācijas kultūrām.",
+        "tags": ["Tikai organic", "Kultūrām draudzīgs", "Pylus saglabāts"],
+        "clients": "Kombučas ražotāji, raugotu dzēruņu iestādes",
+        "category": "clean"
+      }
+    },
+    "params": {
+      "moisture": "Mitruma sat.",
+      "fg": "F/G attiecība",
+      "color": "Krāsa",
+      "aroma": "Aromāta int.",
+      "purity": "Tīrības līmenis",
+      "processing": "Apstrāde"
+    },
+    "paramValues": {
+      "bakeryBase": {
+        "moisture": "18,0%",
+        "fg": "1,1–1,2",
+        "color": "Gaiša–vidēja",
+        "aroma": "Neitrāls",
+        "purity": "Standarts",
+        "processing": "Standarta",
+        "moisturePct": 80,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 30,
+        "purityPct": 50,
+        "processingPct": 50
+      },
+      "bakeryGlaze": {
+        "moisture": "18,5%",
+        "fg": "≥1,3",
+        "color": "Gaiša",
+        "aroma": "Maigs",
+        "purity": "LV/PL atlasīts",
+        "processing": "Mikrofiltrēts",
+        "moisturePct": 82,
+        "fgPct": 70,
+        "colorPct": 25,
+        "aromaPct": 25,
+        "purityPct": 75,
+        "processingPct": 70
+      },
+      "bakeryGingerbread": {
+        "moisture": "17,5–18,5%",
+        "fg": "1,0–1,3",
+        "color": "Tumša ≥85",
+        "aroma": "Intensīvs",
+        "purity": "Pylus verificēts",
+        "processing": "Minimāls",
+        "moisturePct": 78,
+        "fgPct": 50,
+        "colorPct": 90,
+        "aromaPct": 85,
+        "purityPct": 65,
+        "processingPct": 20
+      },
+      "marinade": {
+        "moisture": "18–19,5%",
+        "fg": "≥1,3",
+        "color": "Vidēja",
+        "aroma": "Neitrāls",
+        "purity": "Tikai ES",
+        "processing": "Pasterizēts",
+        "moisturePct": 85,
+        "fgPct": 70,
+        "colorPct": 55,
+        "aromaPct": 35,
+        "purityPct": 55,
+        "processingPct": 65
+      },
+      "mead": {
+        "moisture": "17,5–18,5%",
+        "fg": "1,1–1,3",
+        "color": "Gaiša–vidēja",
+        "aroma": "Līdzsvars",
+        "purity": "Lab. katrai",
+        "processing": "Silts 10–15°C",
+        "moisturePct": 78,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 45,
+        "purityPct": 95,
+        "processingPct": 50
+      },
+      "ferment": {
+        "moisture": "18,5–19,5%",
+        "fg": "1,0–1,2",
+        "color": "Vidēja",
+        "aroma": "Subtils",
+        "purity": "Organiski + lab.",
+        "processing": "Minimāls",
+        "moisturePct": 87,
+        "fgPct": 45,
+        "colorPct": 50,
+        "aromaPct": 20,
+        "purityPct": 100,
+        "processingPct": 30
+      }
+    },
+    "categories": {
+      "universal": "Universāls",
+      "premium": "Premium",
+      "clean": "Tīrības garantija"
+    },
+    "specifications": "Tehniskā specifikācija"
+  },
+  "whyus": {
+    "items": [
+      {
+        "num": "01",
+        "title": "13 gadu pieredze",
+        "description": "Nepārtraukta medus piegāde Baltijas pārtikas un dzēruņu nozarē no 2012. gada. Mēs zinām jūsu ražošanas vajadzības."
+      },
+      {
+        "num": "02",
+        "title": "Organiski sertificēts",
+        "description": "Mums ir organiskās lauksaimniecības sertifikāts. Katrs partijas testējums laboratorijā ir tīrības un Eiropas Kopīgās tirgus drošības standartu atbilstības dēļ."
+      },
+      {
+        "num": "03",
+        "title": "Lieksta logistika",
+        "description": "Mēs piegādājam no 100 kg kastes (7, 14, 29 kg) un bļodās (290 kg). Piegāde visās Baltijas valstīs pēc jūsu ražošanas grafika."
+      }
+    ],
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Stabilitāte no partijas uz partiju",
+        "description": "Vienādi parametri katru reizi. F/G attiecība un mitrums tiek uzturēti stingrās tehniskajās robežās un dokumentēti Honey Passport sertifikātā."
+      },
+      {
+        "num": "02",
+        "title": "Optimizēts procesam",
+        "description": "Sešas līnijas, kas inženierijas ceļā pielāgotas konkrētiem procesiem – no cepšanas līdz fermentācijai, lai novērstu ražošanas brāķi."
+      },
+      {
+        "num": "03",
+        "title": "Sagatavotība auditiem",
+        "description": "Iekšējā partiju pārbaude, ko verificē neatkarīga FoodQS (Vācija) laboratorija. LC-MS/MS skrīnings nodrošina pilnīgu mieru attiecībā uz atbilstību."
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Sertifikāti un kvalitāte",
+    "euCert": "ES pārtikas drošības sertifikāts",
+    "labTested": "Pārbaudīts laboratorijā — bez antibiotikām",
+    "moisture": "Mitruma un diastāzes analīze",
+    "traceability": "Pilns atsekojamības ceļš"
+  },
+  "supplyFormats": {
+    "title": "Iepakojums",
+    "bucket": "Spaini",
+    "bucketSub": "7 kg · 14 kg · 29 kg",
+    "barrel": "Mucas",
+    "barrelSub": "290 kg"
+  },
+  "cta": {
+    "title": "Gatavi sadarboties?",
+    "subtitle": "Sazinieties par lielumtirgošanas cenām, paraugiem un piegādes nosacījumiem, kas piemēroti jūsu ražošanai."
+  },
+  "contact": {
+    "title": "Kontakti",
+    "heading": "Sazināties",
+    "subtitle": "Sazinieties tieši — atbildēsim 24 darba stundu laikā.",
+    "subtitle2": "HoneyMark ir procesiem optimizēts B2B medus zīmols Eiropas pārtikas un dzērienu ražotājiem. Pārvaldot 350 tonnu ražošanas jaudu, mēs pielāgojam katru līniju konkrētam pielietojumam. Jo lētāks medus nav lētāks, ja tas sabojā jūsu ražošanas partiju.",
+    "emailLabel": "E-pasts",
+    "phoneLabel": "Tālrunis",
+    "locationLabel": "Atrašanās vieta",
+    "location": "Juodupė, Lietuva",
+    "email": "info@honeymark.eu",
+    "phone": "+370 64582631",
+    "whatsappLabel": "WhatsApp",
+    "responseTime": "Mēs atbildam 24 darba stundu laikā",
+    "trustBadge1": "ES sertificēts piegādātājs",
+    "trustBadge2": "Katrs partija testēts laboratorijā",
+    "trustBadge3": "Baltijas valstu tirgi",
+    "areaServed": "Pristatome Lietuvai, Latvijai ir Estijai"
+  },
+  "footer": {
+    "copyright": "© {year} Honeymark. Visas tiesības aizsargātas.",
+    "tagline": "Procesiem optimizēts medus Eiropas pārtikas ražotājiem."
+  }
+}

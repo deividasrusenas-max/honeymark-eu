@@ -1,0 +1,49 @@
+---
+export interface Props {
+  locale: string;
+  t: Record<string, any>;
+}
+
+const { locale, t } = Astro.props;
+const year = new Date().getFullYear();
+const copyright = t.footer.copyright.replace('{year}', String(year));
+
+const links = [
+  { href: `/${locale}/products/`, label: t.nav.products },
+  { href: `/${locale}/about/`, label: t.nav.about },
+  { href: `/${locale}/contact/`, label: t.nav.contact },
+];
+---
+
+<footer class="bg-text-primary text-white/50 py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="text-center md:text-left">
+        <a
+          href={`/${locale}/`}
+          class="font-body font-semibold text-[15px] text-white tracking-[-0.01em]"
+        >
+          Honeymark
+        </a>
+        <p class="mt-2 text-sm text-white/30">{t.footer.tagline}</p>
+      </div>
+
+      <nav class="flex flex-wrap items-center justify-center gap-8">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              class="font-body text-sm text-white/40 hover:text-white/80 transition-colors duration-200"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-white/10 text-center text-sm text-white/25">
+      {copyright}
+    </div>
+  </div>
+</footer>

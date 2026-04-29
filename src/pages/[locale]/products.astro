@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'lt' } },
+    { params: { locale: 'lv' } },
+    { params: { locale: 'et' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const translations = await import(`../../i18n/${locale}.json`);
+const t = translations.default;
+
+const title = `${t.products.title} | Honeymark`;
+const description =
+  `Explore Honeymark's ${t.products.title} for wholesale applications.`;
+
+// 6 honey lines
+const honeyLines = Object.keys(t.products.items);
+
+// Get parameter values for each line
+const paramValues = t.products.paramValues || {};
+const params = t.products.params || {};
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProductLine',
+  name: t.products.title,
+  description: t.products.subtitle,
+  productLine: honeyLines.map((key, i) => ({
+    '@type': 'Product',
+    name: (t.products.items as any)[key].name,
+    description: (t.products.items as any)[key].description,
+    category: (t.products.items as any)[key].category
+  }))
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  schema={JSON.stringify(productSchema)}
+>
+  <Nav locale={locale} t={t} />
+
+  <section class="pt-32 pb-20 lg:pt-48 lg:pb-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1
+          class="font-heading font-bold text-text-primary mb-6"
+          style="font-size: clamp(2.5rem, 5vw, 4rem);"
+        >
+          {t.products.title}
+        </h1>
+        <p class="font-body text-lg text-text-secondary leading-relaxed">
+          {t.products.subtitle}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {honeyLines.map((key) => {
+            const item = (t.products.items as any)[key];
+            const values = (paramValues as any)[key] || {};
+            const categoryLabel = t.products.categories[item.category as 'universal' | 'premium' | 'clean'];
+           
+            return (
+              <ProductCard
+                name={item.name}
+                tagline={item.tagline}
+                description={item.description}
+                tags={item.tags}
+                clients={item.clients}
+                category={item.category as any}
+                categoryLabel={categoryLabel}
+                learnMore={t.products.learnMore}
+                specCta={t.products.specCta}
+                params={params}
+                paramValues={values}
+                locale={locale}
+              />
+            );
+         })}
+      </div>
+    </div>
+  </section>
+
+
+  <Footer locale={locale} t={t} />
+</BaseLayout>

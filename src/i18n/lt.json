@@ -1,0 +1,273 @@
+{
+  "nav": {
+    "products": "Prekės",
+    "about": "Apie mus",
+    "contact": "Kontaktai",
+    "cta": "Užsakyti"
+  },
+  "hero": {
+    "title": "Gamtoje natūralus medus jūsų verslui",
+    "titleLine1": "Medus, kuris veikia",
+    "titleLine2": "kaip ingridientas.",
+    "titleLine3": "Ne problema.",
+    "subtitle": "Jūs nesirūpinkite, kad savaitgalį, penktadienį 11 valandą rastumėte stiklinę su nekvalifikuotu glaze. Mes teikiame procesais optimizuotą medų su numatomą pastovumą.",
+    "cta1": "Peržiūrėkite 6 Linijas",
+    "cta2": "Paprašykite mėginio",
+    "badge1": "LC-MS/MS patikrinta",
+    "badge2": "Medaus Paštas per partiją",
+    "badge": "B2B medaus tiekėjas · Baltijos šalys",
+    "badge3suffix": "metų patirtis",
+    "imageAlt": "Auksinis medaus stiklinė su medine šaukštu"
+  },
+  "about": {
+    "title": "Apie mus",
+    "sectionTitle": "Patikimas medaus tiekėjas Baltijoje",
+    "p1": "Honeymark yra B2B medaus prekės ženklas, kurį valdo MB Lakštena, turintis 13 metų patirties Baltijos partijų rinkoje. Mes teikiame natūralų ir organiškai sertifikuotą medų maisto pramonei, konfekcijos pramonei, alaus gamybai ir duonos gamybai.",
+    "p2": "Mūsų klientai – didžiausios Baltijos šalių maisto ir gėrimų įmonės – pasitiki Honeymark dėl nuoseklios kokybės, patikimų pristatymų ir ilgalaikio partnerystės požiūrio.",
+    "description": "HoneyMark yra procesams optimizuotas B2B medaus prekės ženklas, sukurtas Europos maisto ir gėrimų gamintojams. Dėka MB Lakštena 350-tonų apdirbimo galios, mes kiekvieną liniją pritaikome tik tam tikram taikymui. Nes pigesnis medus nėra pigesnis, jei sugadina jūsų partiją.",
+    "logistics": "Ergonomiški 7 kg ir 14 kg kibiriai, atitinkantys EU pakeltimo reglamentus. Pasiruošę siųsti iš mūsų PL/LT centruotų.",
+    "learnMore": "Sužinoti daugiau apie mus",
+    "imageAlt": "Stiklinė su auksiniu medumi"
+  },
+  "products": {
+    "title": "Šešios Linijos",
+    "subtitle": "Kiekviena linija skirta tam tikram gamybos procesui – ne bendrajam žaliavai.",
+    "viewAll": "Žiūrėti visas linijas",
+    "learnMore": "Gauti specifikaciją",
+    "specCta": "Gauti specifikaciją",
+    "items": {
+      "bakeryBase": {
+        "name": "Dionų Pagrindas",
+        "tagline": "Duona, kepiniukai, pyragai",
+        "description": "Universalus Dionų žaliavos medžiaga su pastovia Maillard reakcija. Rinkos lyderis maisto produkcijos apimtyse.",
+        "tags": ["EU žaliavos medžiaga", "Apimties lyderis", "Maillard reakcija"],
+        "clients": "Dionų gamintojai, konfekcijos gamintojai, pyragų ir mūslio gamintojai",
+        "category": "universal"
+      },
+      "bakeryGlaze": {
+        "name": "Dionų Epas",
+        "tagline": "Pyragai, kremai, epai",
+        "description": "Lėtai kristalizuojasi. Išsaugo blizgumą iki paskutinio kliento. Lime ir polifloriniai maišai.",
+        "tags": ["Lime ir polifloriniai", "Lėta kristalizacija", "3 mėnesių garantija"],
+        "clients": "Pyragų konfekcijos gamintojai, užepuotų pyragų gamintojai, kremų gamyklos",
+        "category": "premium"
+      },
+      "bakeryGingerbread": {
+        "name": "Dionų Imbiryto",
+        "tagline": "Dobele, tradicinė konfekcija",
+        "description": "Tamsus, intensyvus skonis, garsas musko ir linų sėklos. Pylus analizė su kiekviena partija.",
+        "tags": ["Musko ir linų sėkla", "Pylus analizė", "Skonio tiekėjas"],
+        "clients": "Dobele gamintojai, tradicinė konfekcija, eksportuotojai",
+        "category": "universal"
+      },
+      "marinade": {
+        "name": "Marinadas",
+        "tagline": "Mėsa, padažai, marinados",
+        "description": "Funkcinė kainodara su EU kilmės garantija. Neutralus aromatas, kuris neperrašo marinadų profilių.",
+        "tags": ["EU kilmė", "Neutralus aromatas", "Funkcinė kainodara"],
+        "clients": "Mėsos apdorojimo įmonės, padažų gamintojai, marinadų ir solymo pramonė",
+        "category": "universal"
+      },
+      "mead": {
+        "name": "Midus",
+        "tagline": "Medus, hidromelas",
+        "description": "Antibiotikų lygiai žemiau aptikimo ribos. Kiekviena partija su laboratoriniais duomenimis ir atsekamumu.",
+        "tags": ["LT atsekamumas", "Antibiotikai žemiau normos", "Medaus Paštas"],
+        "clients": "Midų gamyklos, tradicinės midų gamintojai",
+        "category": "clean"
+      },
+      "ferment": {
+        "name": "Fermentas",
+        "tagline": "Kombucha, kviečių, fermentuoti gėrimai",
+        "description": "Organiškai sertifikuotas. Pylus išsaugotas. Draugiškas fermentacijos kultūroms.",
+        "tags": ["Tik organiniai", "Kultūros draugiški", "Pylus išsaugotas"],
+        "clients": "Kombucha gamintojai, fermentuotų gėrimų įmonės",
+        "category": "clean"
+      }
+    },
+    "params": {
+      "moisture": "Drėgmės turinys",
+      "fg": "F/G santykis",
+      "color": "Spalva",
+      "aroma": "Aromato intensyvumas",
+      "purity": "Grynumas",
+      "processing": "Apdorojimas"
+    },
+    "paramValues": {
+      "bakeryBase": {
+        "moisture": "18.0%",
+        "fg": "1.1–1.2",
+        "color": "Šviesus–vidutinis",
+        "aroma": "Neutralus",
+        "purity": "Standartinis",
+        "processing": "Standartinis",
+        "moisturePct": 80,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 30,
+        "purityPct": 50,
+        "processingPct": 50
+      },
+      "bakeryGlaze": {
+        "moisture": "18.5%",
+        "fg": "≥1.3",
+        "color": "Šviesus",
+        "aroma": "Švelnus",
+        "purity": "LT/PL pasirinkimas",
+        "processing": "Mikrofiltras",
+        "moisturePct": 82,
+        "fgPct": 70,
+        "colorPct": 25,
+        "aromaPct": 25,
+        "purityPct": 75,
+        "processingPct": 70
+      },
+      "bakeryGingerbread": {
+        "moisture": "17.5–18.5%",
+        "fg": "1.0–1.3",
+        "color": "Tamsus ≥85",
+        "aroma": "Intensyvus",
+        "purity": "Pylus patvirtintas",
+        "processing": "Minimalus",
+        "moisturePct": 78,
+        "fgPct": 50,
+        "colorPct": 90,
+        "aromaPct": 85,
+        "purityPct": 65,
+        "processingPct": 20
+      },
+      "marinade": {
+        "moisture": "18–19.5%",
+        "fg": "≥1.3",
+        "color": "Vidutinis",
+        "aroma": "Neutralus",
+        "purity": "Tik EU",
+        "processing": "Pasterizuotas",
+        "moisturePct": 85,
+        "fgPct": 70,
+        "colorPct": 55,
+        "aromaPct": 35,
+        "purityPct": 55,
+        "processingPct": 65
+      },
+      "mead": {
+        "moisture": "17.5–18.5%",
+        "fg": "1.1–1.3",
+        "color": "Šviesus–vidutinis",
+        "aroma": "Subtilus",
+        "purity": "Lab. per partiją",
+        "processing": "Šaltas 10–15°C",
+        "moisturePct": 78,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 45,
+        "purityPct": 95,
+        "processingPct": 50
+      },
+      "ferment": {
+        "moisture": "18.5–19.5%",
+        "fg": "1.0–1.2",
+        "color": "Vidutinis",
+        "aroma": "Subtilus",
+        "purity": "Organinis + lab.",
+        "processing": "Minimalus",
+        "moisturePct": 87,
+        "fgPct": 45,
+        "colorPct": 50,
+        "aromaPct": 20,
+        "purityPct": 100,
+        "processingPct": 30
+      }
+    },
+    "categories": {
+      "universal": "Universalus",
+      "premium": "Premium",
+      "clean": "Clean garantija"
+    },
+    "specifications": "Techninė specifikacija"
+  },
+  "whyus": {
+    "heading": "Kodėl pasirinkti HoneyMark?",
+    "subtitle": "Mūsų privalumai",
+    "items": [
+      {
+        "num": "01",
+        "title": "13 metų patirtis",
+        "description": "Nuolatinis medaus tiekimas Baltijos maisto ir gėrimų pramonei nuo 2012 metų. Mes žinome jūsų gamybos reikalavimus."
+      },
+      {
+        "num": "02",
+        "title": "Organiškai sertifikuotas",
+        "description": "Turime organinių ūkių sertifikatą. Kiekviena partija yra tikrinama laboratorijoje dėl grynumo ir EU maisto saugos standartų atitikties."
+      },
+      {
+        "num": "03",
+        "title": "Lanksti logistika",
+        "description": "Siunčiame nuo 100 kg dėžių (7, 14, 29 kg) ir būrių (290 kg). Pristatome visose Baltijos šalyse pagal jūsų gamybos grafiką."
+      }
+    ],
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Partija į partiją stabilumas",
+        "description": "Tie patys parametrai, visada. F/G santykiai ir drėgmės lygiai laikomi griežtose techninėse tolerancijose. Dokumentuota kiekvienoje Medaus Pašte."
+      },
+      {
+        "num": "02",
+        "title": "Taikymui specifinis",
+        "description": "Šešios linijos, sukurtos tiksliniams procesams. Nuo dionų gamybos iki fermentacijos, kiekviena linija yra testuota su technologais, kad būtų išvengta gamybos nesėkmių."
+      },
+      {
+        "num": "03",
+        "title": "Auditui paruoštas paprastumas",
+        "description": "Vidinė partijų atranka patvirtinta nepriklausomo FoodQS (Vokietija) testavimo. LC-MS/MS screening reiškia, kad jūs niekada nesirūpinate atitikimi."
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Sertifikatai ir kokybė",
+    "euCert": "EU maisto saugos sertifikatas",
+    "labTested": "Laboratorinis tyrimas – jokių antibiotikų",
+    "moisture": "Drėgmės ir diastazės analizė",
+    "traceability": "Pilna atsekamumas"
+  },
+  "supplyFormats": {
+    "title": "Pakavimas",
+    "bucket": "Kibiriai",
+    "bucketSub": "7 kg · 14 kg · 29 kg",
+    "barrel": "Būriai",
+    "barrelSub": "290 kg"
+  },
+  "cta": {
+    "title": "Pasiruošę bendradarbiauti?",
+    "subtitle": "Gaukite informaciją dėl partijų kainų, mėginių ir pristatymo sąlygų, pritaikytų jūsų gamybai.",
+    "subtitle2": "HoneyMark yra procesams optimizuotas B2B medaus prekės ženklas, sukurtas Europos maisto ir gėrimų gamintojams. Dėka MB Lakštena 350-tonų apdirbimo galios, mes kiekvieną liniją pritaikome tik tam tikram taikymui."
+  },
+  "contact": {
+    "title": "Kontaktai",
+    "heading": "Susisiekti",
+    "subtitle": "Susisiekite tiesiogiai — atsakome per 24 darbo valandas.",
+    "subtitle2": "HoneyMark yra procesams optimizuotas B2B medaus prekės ženklas, sukurtas Europos maisto ir gėrimų gamintojams. Dėka MB Lakštena 350-tonų apdirbimo galios, mes kiekvieną liniją pritaikome tik tam tikram taikymui.",
+    "emailLabel": "El. paštas",
+    "phoneLabel": "Telefonas",
+    "locationLabel": "Vietovė",
+    "location": "Juodupė, Lietuva",
+    "email": "info@honeymark.eu",
+    "phone": "+370 64582631",
+    "whatsappLabel": "WhatsApp",
+    "responseTime": "Atsakome per 24 darbo valandas",
+    "trustBadge1": "EU sertifikuotas tiekėjas",
+    "trustBadge2": "Kiekviena partija tikrinama laboratorijoje",
+    "trustBadge3": "Baltijos šalių rinkos",
+    "areaServed": "Tiekiamas Lietuvoje, Latvijoje ir Estijoje"
+  },
+  "footer": {
+    "copyright": "© {year} Honeymark. Visos teisės saugomos.",
+    "tagline": "Procesams optimizuotas medus EU maisto gamintojams."
+  },
+  "banner": {
+    "message": "Atrodo, kad galbūt jums patiks angliška versija.",
+    "cta": "Peržiūrėti puslapį angliškai",
+    "dismiss": "×"
+  }
+}

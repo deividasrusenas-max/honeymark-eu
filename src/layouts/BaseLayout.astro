@@ -1,0 +1,159 @@
+c---
+import '../styles/global.css';
+import LocaleBanner from '../components/LocaleBanner.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  schema?: string;
+}
+
+const { title, description, locale, schema } = Astro.props;
+
+const translations = await import(`../i18n/${locale}.json`);
+const t = translations.default;
+
+const contactTranslations = await import(`../i18n/${locale}.json`);
+const ct = contactTranslations.default;
+
+const siteUrl = 'https://honeymark.eu';
+const currentPath = Astro.url.pathname;
+const canonicalUrl = new URL(currentPath, siteUrl).toString();
+
+const locales = ['lt', 'lv', 'et', 'en'];
+
+// Build breadcrumb schema for inner pages
+function buildBreadcrumb(path: string) {
+  const segments = path.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+  if (segments.length < 2) return null;
+
+  const localeCode = segments[0];
+  const pageNames: Record<string, Record<string, string>> = {
+    lt: { products: 'Produktai', about: 'Apie mus', contact: 'Kontaktai' },
+    lv: { products: 'Produkti', about: 'Par mums', contact: 'Kontakti' },
+    et: { products: 'Tooted', about: 'Meist', contact: 'Kontakt' },
+    en: { products: 'Products', about: 'About us', contact: 'Contact' },
+  };
+
+  const items = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `${siteUrl}/${localeCode}/`,
+    },
+  ];
+
+  segments.slice(1).forEach((seg, i) => {
+    const name = pageNames[localeCode]?.[seg] || seg;
+    const itemPath = `/${segments.slice(0, i + 2).join('/')}/`;
+    items.push({
+      '@type': 'ListItem',
+      position: i + 2,
+      name,
+      item: `${siteUrl}${itemPath}`,
+    });
+  });
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items,
+  };
+}
+
+const breadcrumbSchema = buildBreadcrumb(currentPath);
+---
+
+<!DOCTYPE html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#C9A84C" />
+
+    {
+      locales.map((loc) => {
+        const locPath = currentPath.replace(/^\/(lt|lv|et|en)/, `/${loc}`);
+        const href = new URL(locPath, siteUrl).toString();
+        return <link rel="alternate" hreflang={loc} href={href} />;
+      })
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://honeymark.eu/en/"
+    />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Honeymark" />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:image" content="https://honeymark.eu/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://honeymark.eu/og-image.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    {
+      schema && (
+        <script type="application/ld+json" set:html={schema} />
+      )
+    }
+
+    {
+      breadcrumbSchema && (
+        <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+      )
+    }
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Honeymark',
+        url: siteUrl,
+        logo: `${siteUrl}/logo.png`,
+        areaServed: ['LT', 'LV', 'EE'],
+        sameAs: [
+          'https://www.linkedin.com/company/honeymark-eu',
+          'https://rekvizitai.vz.lt/imone/honeymark/',
+          'https://www.facebook.com/honeymark',
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: ct.contact.email,
+          contactType: 'sales',
+          areaServed: ['LT', 'LV', 'EE'],
+          availableLanguage: [
+            'Lithuanian',
+            'Latvian',
+            'Estonian',
+            'English',
+          ],
+        },
+      })}
+    />
+  </head>
+  <body class="font-body text-text-primary bg-white antialiased">
+    <LocaleBanner currentLocale={locale} t={t} />
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'lt' } },
+    { params: { locale: 'lv' } },
+    { params: { locale: 'et' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const translations = await import(`../../i18n/${locale}.json`);
+const t = translations.default;
+
+const title = `${t.about.title} | Honeymark`;
+const description = t.about.description;
+---
+
+<BaseLayout title={title} description={description} locale={locale}>
+  <Nav locale={locale} t={t} />
+
+  <section class="pt-32 pb-20 lg:pt-48 lg:pb-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1
+          class="font-heading font-bold text-text-primary mb-6"
+          style="font-size: clamp(2.5rem, 5vw, 4rem);"
+        >
+          {t.about.title}
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 lg:py-32 bg-warm-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <img
+            src="/images/honeymark-medaus-tiekimas-baltijos-salys.png"
+            alt={t.about.imageAlt}
+            class="w-full aspect-[4/5] object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <p class="font-body text-text-secondary leading-relaxed mb-6">
+            {t.about.description}
+          </p>
+          <p class="font-body text-text-secondary/70 leading-relaxed">
+            {t.about.logistics}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h2
+        class="font-heading font-bold text-text-primary text-center mb-20"
+        style="font-size: clamp(1.75rem, 3vw, 2.5rem);"
+      >
+        {t.products.specifications}
+      </h2>
+      <div class="grid md:grid-cols-3 gap-16">
+        <div class="text-center">
+          <span class="block font-heading text-5xl text-accent/15 mb-6">1</span>
+          <h3 class="font-heading text-lg font-semibold text-text-primary mb-3">
+            {t.certifications.euCert}
+          </h3>
+          <p class="font-body text-sm text-text-secondary leading-relaxed">
+            {t.certifications.traceability}
+          </p>
+        </div>
+        <div class="text-center">
+          <span class="block font-heading text-5xl text-accent/15 mb-6">2</span>
+          <h3 class="font-heading text-lg font-semibold text-text-primary mb-3">
+            {t.certifications.labTested}
+          </h3>
+          <p class="font-body text-sm text-text-secondary leading-relaxed">
+            {t.certifications.moisture}
+          </p>
+        </div>
+        <div class="text-center">
+          <span class="block font-heading text-5xl text-accent/15 mb-6">3</span>
+          <h3 class="font-heading text-lg font-semibold text-text-primary mb-3">
+            {t.products.categories.clean}
+          </h3>
+          <p class="font-body text-sm text-text-secondary leading-relaxed">
+            {t.products.items.mead.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} t={t} />
+</BaseLayout>

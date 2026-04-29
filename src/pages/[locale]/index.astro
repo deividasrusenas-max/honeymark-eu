@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import WhyUs from '../../components/WhyUs.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'lt' } },
+    { params: { locale: 'lv' } },
+    { params: { locale: 'et' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const translations = await import(`../../i18n/${locale}.json`);
+const t = translations.default;
+
+const title = `${t.hero.title} | Honeymark`;
+const description = t.hero.subtitle;
+
+// FAQ schema only for English page
+const faqSchema = locale === 'en' ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What regions does Honeymark serve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Honeymark supplies wholesale honey to businesses across Lithuania, Latvia, Estonia, and Poland with reliable logistics and temperature-controlled delivery.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What types of honey do you offer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer rapeseed honey, buckwheat honey, polyfloral honey, creamed honey, organic honey, and private-label options tailored to your brand.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you provide private-label packaging?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, we offer flexible private-label solutions including custom branding, jar sizes, and packaging design for retailers and distributors.',
+      },
+    },
+  ],
+} : null;
+
+const paramValues = t.products.paramValues || {};
+
+const previewProducts = [
+  { key: 'bakeryBase', ...t.products.items.bakeryBase },
+  { key: 'mead', ...t.products.items.mead },
+  { key: 'ferment', ...t.products.items.ferment },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  schema={JSON.stringify(faqSchema)}
+>
+  <Nav locale={locale} t={t} />
+
+  <Hero
+    title={t.hero.title}
+    subtitle={t.hero.subtitle}
+    cta1={t.hero.cta1}
+    cta2={t.hero.cta2}
+    locale={locale}
+    t={t}
+  />
+
+  <!-- About preview -->
+  <section id="apie" class="relative py-24 lg:py-32 bg-warm-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="relative mb-16">
+        <span class="section-number">01</span>
+        <h2
+          class="relative z-10 font-heading font-bold text-text-primary"
+          style="font-size: clamp(2rem, 4vw, 3rem);"
+        >
+          {t.about.sectionTitle.split(' ').slice(0, -1).join(' ')} <span class="italic text-accent">{t.about.sectionTitle.split(' ').pop()}</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="font-body text-text-secondary leading-relaxed mb-6 text-[17px]">
+            {t.about.p1}
+          </p>
+          <p class="font-body text-text-secondary/70 leading-relaxed mb-10">
+            {t.about.p2}
+          </p>
+          <a
+            href={`/${locale}/about/`}
+            class="inline-flex items-center gap-2 font-body text-sm text-accent hover:gap-3 transition-all duration-200"
+          >
+            {t.about.learnMore}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80"
+            alt={t.about.imageAlt}
+            class="w-full aspect-[4/5] object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products preview -->
+  <section id="produktai" class="py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
+        <div>
+          <h2
+            class="font-heading font-bold text-text-primary mb-3"
+            style="font-size: clamp(2rem, 4vw, 3rem);"
+          >
+            {t.products.title}
+          </h2>
+          <p class="font-body text-text-secondary max-w-md">
+            {t.products.subtitle}
+          </p>
+        </div>
+        <a
+          href={`/${locale}/products/`}
+          class="inline-flex items-center gap-2 font-body text-sm text-accent hover:gap-3 transition-all duration-200 shrink-0"
+        >
+          {t.products.viewAll}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+
+       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+         {
+           previewProducts.map((product) => {
+             const values = (paramValues as any)[product.key] || {};
+             const categoryLabel = t.products.categories[product.category as 'universal' | 'premium' | 'clean'];
+             return (
+                <ProductCard
+                  name={product.name}
+                  tagline={product.tagline}
+                  description={product.description}
+                  tags={product.tags}
+                  clients={product.clients}
+                  category={product.category as any}
+                  categoryLabel={categoryLabel}
+                  learnMore={t.products.learnMore}
+                  specCta={t.products.specCta}
+                  params={t.products.params}
+                  paramValues={values}
+                  locale={locale}
+                />
+             );
+           })
+         }
+       </div>
+    </div>
+  </section>
+
+  <WhyUs id="kodel" t={t} />
+
+  <!-- Certifications & Quality -->
+  <section class="py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h2
+        class="font-heading font-bold text-text-primary text-center mb-16"
+        style="font-size: clamp(1.75rem, 3vw, 2.5rem);"
+      >
+        {t.certifications.title}
+      </h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-warm-white rounded-full">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <p class="font-body text-sm text-text-primary font-medium leading-snug">{t.certifications.euCert}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-warm-white rounded-full">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <p class="font-body text-sm text-text-primary font-medium leading-snug">{t.certifications.labTested}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-warm-white rounded-full">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <p class="font-body text-sm text-text-primary font-medium leading-snug">{t.certifications.moisture}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-warm-white rounded-full">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path>
+            </svg>
+          </div>
+          <p class="font-body text-sm text-text-primary font-medium leading-snug">{t.certifications.traceability}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supply Formats -->
+  <section class="py-24 lg:py-32 bg-warm-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h2
+        class="font-heading font-bold text-text-primary text-center mb-16"
+        style="font-size: clamp(1.75rem, 3vw, 2.5rem);"
+      >
+        {t.supplyFormats.title}
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="text-center p-8 bg-white border border-border">
+          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-warm-white rounded-full">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+          </div>
+          <p class="font-body text-base text-text-primary font-medium">{t.supplyFormats.bucket}</p>
+          <p class="font-body text-sm text-text-secondary mt-1">{t.supplyFormats.bucketSub}</p>
+        </div>
+        <div class="text-center p-8 bg-white border border-border">
+          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-warm-white rounded-full">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <p class="font-body text-base text-text-primary font-medium">{t.supplyFormats.barrel}</p>
+          <p class="font-body text-sm text-text-secondary mt-1">{t.supplyFormats.barrelSub}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="kontaktai" class="py-24 lg:py-32 bg-warm-white">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+      <h2
+        class="font-heading font-bold italic text-accent mb-6"
+        style="font-size: clamp(2rem, 4vw, 3rem);"
+      >
+        {t.cta.title}
+      </h2>
+      <p class="font-body text-text-secondary text-lg mb-12 leading-relaxed">
+        {t.cta.subtitle}
+      </p>
+      <a
+        href={`/${locale}/contact/`}
+        class="btn-pill bg-text-primary text-white hover:bg-text-primary/85"
+      >
+        {t.nav.cta}
+      </a>
+    </div>
+  </section>
+
+  <Footer locale={locale} t={t} />
+</BaseLayout>

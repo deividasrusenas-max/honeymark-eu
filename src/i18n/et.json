@@ -1,0 +1,265 @@
+{
+  "nav": {
+    "products": "Tooted",
+    "about": "Meist",
+    "contact": "Kontakt",
+    "cta": "Tellida"
+  },
+  "hero": {
+    "title": "Loomulik mesi teie ettevõttele",
+    "titleLine1": "Mees, mis käitub",
+    "titleLine2": "nagu ainus.",
+    "titleLine3": "Mitte probleemina.",
+    "subtitle": "Me tarname protsessidele optimeeritud B2B meest garantitud partii stabiilsusega. Enam ei ole peatunud tootmisliinide ja stresi enne auditit.",
+    "cta1": "Tutvu 6 liiniga",
+    "cta2": "Tellige proovipartii",
+    "badge1": "LC-MS/MS laboratooriumis",
+    "badge2": "Honey Passport sertifikaadid",
+    "badge": "B2B mesi tarnija · Balti riigid",
+    "badge3suffix": "aastat kogemust",
+    "imageAlt": "Kuldne mesikast klaasist"
+  },
+  "about": {
+    "title": "Meist",
+    "sectionTitle": "Usaldusväärne Balti mees tarnija",
+    "p1": "Honeymark on MB Lakštena hallatav B2B meesbränd, millel on 13 aastat kogemust Balti suurturgudel. Me tarname loomulikku ja orgaanikasertifitseeritud meest toidu- ja jookide tootmise, kandekonfektide, alkohoolsete jookide ja jahutööstuse tarbeks.",
+    "p2": "Meie kliendid on suurimad Balti toidu- ja jookide tootjad, kes usaldavad Honeymarki ühtlust kvaliteeti, usaldusväärseid tarnimisi ja pidevaa partnerlusmeetodit.",
+    "description": "HoneyMark on protsessidele optimeeritud B2B mee bränd Euroopa toidu- ja joogitootjatele. Hallates 350-tonnist tootmisvõimsust, kohandame iga liini konkreetseks kasutuseks. Sest odavam mesi pole odavam, kui see rikub teie tootmispartii.",
+    "logistics": "Ergonoomilised 7 kg ja 14 kg ämbrid, mis vastavad ELi tõstmisnõuetele. Pidev varu PL/LT ladudes.",
+    "learnMore": "Lisateave meist",
+    "imageAlt": "Klaas kuldset meest"
+  },
+  "products": {
+    "title": "Kuus liini",
+    "subtitle": "Iga liini loodi konkreetse tootmisprotsessi jaoks - mitte üldise raakmaterjalina.",
+    "viewAll": "Vaata kõiki liine",
+    "learnMore": "Hankige spetsifikatsioon",
+    "specCta": "Hankige spetsifikatsioon",
+    "items": {
+      "bakeryBase": {
+        "name": "Bakery Base",
+        "tagline": "Pasta, leib, kandekondukt",
+        "description": "Üldine jahutööstuse raakmaterjal stabiilse Maillardi reaktsiooniga. Turu liider toidutoodete tootmise osas.",
+        "tags": ["EL raakmaterjal", "Tootmiskoguste liider", "Maillardi reaktsioon"],
+        "clients": "Leibatootjad, kandekonfektitootjad, jahutööstus ja müsli tootjad",
+        "category": "universal"
+      },
+      "bakeryGlaze": {
+        "name": "Bakery Glaze",
+        "tagline": "Pirukad, kreedid, kleepsed",
+        "description": "Aeglust kristallub. Säilitab rõõmu kuni viimase kliendini. Liblik ja paljud puuviljad.",
+        "tags": ["Liblik ja paljud puuviljad", "Aeglane kristallumine", "3 kuuga garantiiga"],
+        "clients": "Pirukakonfektitootjad, kleepsete tootjad, kreediruumid",
+        "category": "premium"
+      },
+      "bakeryGingerbread": {
+        "name": "Bakery Gingerbread",
+        "tagline": "Kodumeelne jahutööstus, traditsioonilised konfektitooted",
+        "description": "Tume, intensiivse lõhnaga pähklite ja liblik jook. Pylus analüüsiga igas partii.",
+        "tags": ["Pähklid ja liblik", "Pylus analüüs", "Aromaadi andja"],
+        "clients": "Kodumeelse jahutööstuse tootjad, traditsioonilised konfektitooted, eksportijad",
+        "category": "universal"
+      },
+      "marinade": {
+        "name": "Marinade",
+        "tagline": "Liha, soodused, marinadid",
+        "description": "Funktsionaalne kalkulatsioon EL päritoluga garantiga. Neutraalne lõhn, mis ei üleseeri marinadi profiili.",
+        "tags": ["EL päritolu", "Neutraalne lõhn", "Funktsionaalne kalkulatsioon"],
+        "clients": "Liha töötlemise ettevõtted, soodused tootjad, marinadid ja konservide tööstus",
+        "category": "universal"
+      },
+      "mead": {
+        "name": "Mead",
+        "tagline": "Mees, hidromeel",
+        "description": "Antibiootikumide tase allapoole tuvastamise piiri. Iga partii laboritoonidega ja iseseisvusega.",
+        "tags": ["LV iseseisvus", "Antibiootikumid allapoole normi", "Honey Passport"],
+        "clients": "Meestootjad, traditsioonilised meesvallad",
+        "category": "clean"
+      },
+      "ferment": {
+        "name": "Ferment",
+        "tagline": "Kombucha, kääritavad jookid, kääritud jookid",
+        "description": "Orgaanikasertifitseeritud. Pylus säilitatud. Sõbralik käärimiskultuuridele.",
+        "tags": ["Ainult orgaanikas", "Kultuuridele sõbralik", "Pylus säilitatud"],
+        "clients": "Kombucha tootjad, kääritavate jookide vallad",
+        "category": "clean"
+      }
+    },
+    "params": {
+      "moisture": "Niiskuse sisse",
+      "fg": "F/G suhe",
+      "color": "Värv",
+      "aroma": "Aromaadi tugevus",
+      "purity": "Puhtuse tase",
+      "processing": "Töötlemine"
+    },
+    "paramValues": {
+      "bakeryBase": {
+        "moisture": "18,0%",
+        "fg": "1,1–1,2",
+        "color": "Hele–keskmine",
+        "aroma": "Neutraalne",
+        "purity": "Standard",
+        "processing": "Standardne",
+        "moisturePct": 80,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 30,
+        "purityPct": 50,
+        "processingPct": 50
+      },
+      "bakeryGlaze": {
+        "moisture": "18,5%",
+        "fg": "≥1,3",
+        "color": "Hele",
+        "aroma": "Peene",
+        "purity": "LV/PL valik",
+        "processing": "Mikrofiltratsioon",
+        "moisturePct": 82,
+        "fgPct": 70,
+        "colorPct": 25,
+        "aromaPct": 25,
+        "purityPct": 75,
+        "processingPct": 70
+      },
+      "bakeryGingerbread": {
+        "moisture": "17,5–18,5%",
+        "fg": "1,0–1,3",
+        "color": "Tume ≥85",
+        "aroma": "Intensiivne",
+        "purity": "Pylus verifitseeritud",
+        "processing": "Minimaalne",
+        "moisturePct": 78,
+        "fgPct": 50,
+        "colorPct": 90,
+        "aromaPct": 85,
+        "purityPct": 65,
+        "processingPct": 20
+      },
+      "marinade": {
+        "moisture": "18–19,5%",
+        "fg": "≥1,3",
+        "color": "Keskmine",
+        "aroma": "Neutraalne",
+        "purity": "Ainult EL",
+        "processing": "Pasteuriseeritud",
+        "moisturePct": 85,
+        "fgPct": 70,
+        "colorPct": 55,
+        "aromaPct": 35,
+        "purityPct": 55,
+        "processingPct": 65
+      },
+      "mead": {
+        "moisture": "17,5–18,5%",
+        "fg": "1,1–1,3",
+        "color": "Hele–keskmine",
+        "aroma": "Tasakaalus",
+        "purity": "Lab. igaüks",
+        "processing": "Soojus 10–15°C",
+        "moisturePct": 78,
+        "fgPct": 55,
+        "colorPct": 35,
+        "aromaPct": 45,
+        "purityPct": 95,
+        "processingPct": 50
+      },
+      "ferment": {
+        "moisture": "18,5–19,5%",
+        "fg": "1,0–1,2",
+        "color": "Keskmine",
+        "aroma": "Subtilne",
+        "purity": "Orgaaniline + lab.",
+        "processing": "Minimaalne",
+        "moisturePct": 87,
+        "fgPct": 45,
+        "colorPct": 50,
+        "aromaPct": 20,
+        "purityPct": 100,
+        "processingPct": 30
+      }
+    },
+    "categories": {
+      "universal": "Üldine",
+      "premium": "Premium",
+      "clean": "Puhtuse garantii"
+    },
+    "specifications": "Tehniline spetsifikatsioon"
+  },
+  "whyus": {
+    "items": [
+      {
+        "num": "01",
+        "title": "13 aastat kogemust",
+        "description": "Jätkuvalt mees tarne Balti toidu- ja jookide tootmisele alates 2012. aastast. Me teame teie tootmise vajadusi."
+      },
+      {
+        "num": "02",
+        "title": "Orgaanikasertifitseeritud",
+        "description": "Meil on orgaanilise põlluviljeluse sertifikaat. Iga partii laboratooriumis testimine on puhtuse ja EL turu turvalisuse standarditele vastavuse tõttu."
+      },
+      {
+        "num": "03",
+        "title": "Liekse logistika",
+        "description": "Me tarname alates 100 kg kastist (7, 14, 29 kg) ja rööpast (290 kg). Tarnimine kogu Balti riikides teie tootmise graafiku järgi."
+      }
+    ],
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Stabiilsus partiist partii",
+        "description": "Sama parameetrid iga kord. F/G suhe ja niiskus hoitakse rangetes tehnilistes piirides ja dokumenteeritakse igas Honey Passport sertifikaadis."
+      },
+      {
+        "num": "02",
+        "title": "Protsessile optimeeritud",
+        "description": "Kuus liini, mis on spetsiaalselt välja töötatud konkreetsete protsesside jaoks – küpsetamisest kääritamiseni, et vältida tootmispraaki."
+      },
+      {
+        "num": "03",
+        "title": "Valmisolek auditiks",
+        "description": "Sisemine partiide kontroll, mida kinnitab sõltumatu FoodQS (Saksamaa) labor. LC-MS/MS analüüsid tagavad täieliku kindlustunde."
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Sertifikaadid ja kvaliteet",
+    "euCert": "EL toiduturvalisuse sertifikaat",
+    "labTested": "Laboris testitud - ilma antibiootikumideta",
+    "moisture": "Niiskuse ja diastaasi analüüs",
+    "traceability": "Täielik jälitavus"
+  },
+  "supplyFormats": {
+    "title": "Pakend",
+    "bucket": "Täidetud ämbrid",
+    "bucketSub": "7 kg · 14 kg · 29 kg",
+    "barrel": "Südamikud",
+    "barrelSub": "290 kg"
+  },
+  "cta": {
+    "title": "Valmis koostööle?",
+    "subtitle": "Võtke ühendust suurturgude hindade, proovide ja teie tootmisele sobivate tarnimistingimuste kohta."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "heading": "Võta ühendust",
+    "subtitle": "Võtke ühendust otse - vastame 24 töötunni jooksul.",
+    "subtitle2": "HoneyMark on protsessidele optimeeritud B2B mee bränd Euroopa toidu- ja joogitootjatele. Hallates 350-tonnist tootmisvõimsust, kohandame iga liini konkreetseks kasutuseks. Sest odavam mesi pole odavam, kui see rikub teie tootmispartii.",
+    "emailLabel": "E-post",
+    "phoneLabel": "Telefon",
+    "locationLabel": "Asukoht",
+    "location": "Juodupė, Leedu",
+    "email": "info@honeymark.eu",
+    "phone": "+370 64582631",
+    "whatsappLabel": "WhatsApp",
+    "responseTime": "Vastame 24 töötunni jooksul",
+    "trustBadge1": "EL sertifitseeritud tarnija",
+    "trustBadge2": "Iga partii laboris testitud",
+    "trustBadge3": "Balti riikide turid",
+    "areaServed": "Läbimõeldud Leedu, Lätile ja Eestile"
+  },
+  "footer": {
+    "copyright": "© {year} Honeymark. Kõik õigused kaitstud.",
+    "tagline": "Protsessidele optimeeritud mesi EL toidutootjatele."
+  }
+}

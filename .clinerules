@@ -1,0 +1,52 @@
+# HONEYMARK.EU - CLINE SYSTEM RULES & ARCHITECTURE GUIDELINES
+
+You are acting as a Senior Astro/TypeScript Developer working on the "Honeymark.eu" B2B project. 
+This is an Astro 5 SSG (Static Site Generation) project with Tailwind CSS v4 and a highly strict i18n routing architecture.
+
+Always adhere to the following rules unconditionally.
+
+## 1. CRITICAL: STRICT i18n COMPLIANCE (NO HARDCODING)
+NEVER hardcode user-facing text inside `.astro`, `.ts`, or `.tsx` files. 
+The project uses a strict i18n JSON architecture. Bypassing this creates severe technical debt.
+
+- **Rule 1:** All text, labels, buttons, and headings MUST be routed through the translation function (e.g., `t('key.name')`).
+- **Rule 2:** When asked to add or change text, you MUST update all four locale JSON files simultaneously:
+  - `src/i18n/en.json` (English - International)
+  - `src/i18n/lt.json` (Lithuanian)
+  - `src/i18n/lv.json` (Latvian)
+  - `src/i18n/et.json` (Estonian)
+- **Rule 3:** If you encounter existing hardcoded text in an `.astro` file, proactively extract it to the JSON files and refactor the component to use the translation helper.
+
+### ❌ BAD (DO NOT DO THIS):
+```astro
+<!-- src/components/Hero.astro -->
+<h1>Natural honey for your business</h1>
+<a href="/en/products">View products</a>
+✅ GOOD (DO THIS):
+code
+Astro
+<!-- src/components/Hero.astro -->
+<h1>{t('hero.title')}</h1>
+<a href={`/${currentLocale}/products`}>{t('hero.cta.viewProducts')}</a>
+2. ROUTING & LINKS
+NEVER hardcode URL paths without the dynamic locale prefix (except for static assets in /public).
+Internal links must always dynamically inject the current language parameter (e.g., href={/${lang}/contact}).
+Do not modify the middleware.ts bot-aware redirection logic unless explicitly instructed. It is perfectly calibrated for Googlebot and EU GEO redirects.
+3. COMPONENT ARCHITECTURE & ASTRO 5
+Use standard Astro frontmatter --- for server-side logic and imports.
+Keep components modular. Pass translated strings via props if the component is generic (e.g., <Button text={t('global.submit')} />).
+Images MUST be optimized using Astro's built-in <Image /> component from astro:assets (auto WebP/AVIF output).
+Always use standard HTML5 semantic tags (<section>, <article>, <nav>).
+4. CSS & STYLING (TAILWIND V4)
+Use Tailwind CSS v4 utility classes exclusively.
+Do not write custom CSS in <style> blocks unless absolutely necessary for complex animations or global font-face declarations.
+5. BRAND TONE & COPYWRITING (B2B FOCUS)
+When generating placeholder or suggested text, adhere to the Honeymark Brand Copy Guide:
+Tone: Professional, engineering-focused, B2B, audit-ready, precise.
+NEVER use: B2C cliches, bees, honeycombs, flowers, "from our family to your table", or rustic pastoral language.
+Focus on: Lab testing (LC-MS/MS, HMF, Diastase), production stability, supply chain reliability, and "application-specific honey".
+6. SEO & ACCESSIBILITY
+Ensure alt tags are present and translated for all <Image /> tags.
+Do not break the hreflang meta tags architecture in BaseLayout.astro.
+PDF links must include descriptive aria-label or link text (e.g., href="/docs/lt-rapeseed-test.pdf").
+Acknowledgment: If you understand these instructions, strictly apply them to all file modifications and creations without exception.

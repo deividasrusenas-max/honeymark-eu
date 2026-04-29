@@ -1,0 +1,104 @@
+---
+export interface Props {
+  currentLocale: string;
+  t: Record<string, any>;
+}
+
+const { currentLocale, t } = Astro.props;
+
+// Map locale codes to display names
+const localeNames: Record<string, string> = {
+  lt: 'Lietuvių',
+  lv: 'Latviešu',
+  et: 'Eesti',
+  en: 'English',
+};
+---
+
+<div
+  id="locale-banner"
+  class="fixed top-16 left-0 right-0 z-40 bg-[#F9F8F5] border-b border-border transform -translate-y-full transition-transform duration-300"
+  style="height: 44px; display: none;"
+  data-current-locale={currentLocale}
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-between">
+    <div class="flex items-center gap-2 font-body text-sm text-text-secondary">
+      <span id="locale-banner-message"></span>
+      <a
+        id="locale-banner-link"
+        href="/"
+        class="text-accent hover:underline font-medium"
+      >
+        <span id="locale-banner-cta"></span> →
+      </a>
+    </div>
+    <button
+      id="locale-banner-dismiss"
+      type="button"
+      class="font-body text-lg text-text-secondary hover:text-text-primary leading-none px-2"
+      aria-label="Dismiss"
+    >
+      ×
+    </button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const banner = document.getElementById('locale-banner');
+    const dismissBtn = document.getElementById('locale-banner-dismiss');
+    const messageEl = document.getElementById('locale-banner-message');
+    const ctaEl = document.getElementById('locale-banner-cta');
+    const linkEl = document.getElementById('locale-banner-link');
+    if (!banner || !dismissBtn || !messageEl || !ctaEl || !linkEl) return;
+
+    const currentLocale = banner.getAttribute('data-current-locale') || '';
+    const localeNames: Record<string, string> = {
+      lt: 'Lietuvių',
+      lv: 'Latviešu',
+      et: 'Eesti',
+      en: 'English',
+    };
+
+    // Detect browser language
+    const browserLang = navigator.language || (navigator as any).userLanguage || '';
+    const detectedLocale = browserLang.trim().toLowerCase().slice(0, 2);
+
+    // Check if banner was dismissed
+    const dismissed = document.cookie.includes('locale_banner_dismissed=1');
+
+    // Only show if detected locale differs and is supported
+    const supported = ['lt', 'lv', 'et', 'en'];
+    if (
+      dismissed ||
+      !supported.includes(detectedLocale) ||
+      detectedLocale === currentLocale
+    ) {
+      return;
+    }
+
+    // Populate text from data attributes or fallbacks
+    const bannerT = (window as any).__localeBanner || {};
+    messageEl.textContent = bannerT.message?.replace?.('{lang}', localeNames[detectedLocale]) ||
+      `It looks like you might prefer ${localeNames[detectedLocale]}.`;
+    ctaEl.textContent = bannerT.cta?.replace?.('{lang}', localeNames[detectedLocale]) ||
+      `View site in ${localeNames[detectedLocale]}`;
+    linkEl.setAttribute('href', `/${detectedLocale}/`);
+    banner.style.display = 'block';
+
+    // Slide in
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        banner.classList.remove('-translate-y-full');
+      }, 300);
+    });
+
+    dismissBtn.addEventListener('click', () => {
+      banner.classList.add('-translate-y-full');
+      setTimeout(() => {
+        banner.style.display = 'none';
+      }, 300);
+      document.cookie = 'locale_banner_dismissed=1; Path=/; Max-Age=2592000; SameSite=Lax';
+    });
+  })();
+</script>
